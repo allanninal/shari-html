@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2
+
+- Demo email addresses now end in .example, so none can reach a real business.
+
 ## 1.0.1
 
 - LICENSE is now the plain MIT text, so GitHub recognises it. Photos and fonts stay covered in CREDITS.md.
