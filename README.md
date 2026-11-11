@@ -17,8 +17,13 @@ Shari is a free, plain-HTML website for a sushi bar. Open `index.html` and it wo
 - **À La Carte Menu** — tabbed (Nigiri / Sashimi / Rolls / Sake) with Japanese name annotations and prices
 - **Chef story** — narrative bio, philosophy quote, credential panel
 - **Reservations** — email CTA, private-event email contact
-- **Hours & Location** — full weekly schedule, address, phone, email, Google Maps link
-- **Schema.org JSON-LD** — `Restaurant` + `Menu` + `Person` (chef)
+- **Hours & Location** — full weekly schedule from one table (`src/data/hours.ts`), address, phone, email, Google Maps link
+- **Contains line** on every dish, from data: the US nine allergens, coconut as its own flag, molluscs as a separate word; a site-wide allergy notice; a soy sauce (wheat and soy) note
+- **Raw or undercooked advisory** — an asterisk on every raw item and the FDA Food Code 3-603.11 footnote on every menu view
+- **Per dish** — piece count, form (nigiri, sashimi, maki, hand roll), raw or cooked; species and origin only where you fill them in
+- **Omakase block** — seatings, counter seats, price, deposit, cancellation window, and a booking link-out button (`bookingUrl`)
+- **Takeout sets** — piece counts, serves, Contains line, an "Order takeout" button (`orderUrl`)
+- **Schema.org JSON-LD** — `Restaurant` (opening hours from the hours table) + `Menu` (every section and item) + `Person` (chef)
 - **Menu page** — the whole menu on one printable page, with the raw-fish and allergen note
 - **Journal** — three posts and their pages
 - **Contact** — a plain form that opens the visitor's email app (no back end)
@@ -56,13 +61,13 @@ It is a folder of static files, so any static host works.
 
 ## Measured scores
 
-Lighthouse mobile, this folder served as static files, median of three runs (2 November 2026):
+Lighthouse mobile, this folder served as static files, median of three runs (11 November 2026):
 
 | Page | Performance | Accessibility | Best practices | SEO |
 |---|---:|---:|---:|---:|
-| Home | 97 | 100 | 100 | 100 |
+| Home | 96 | 100 | 100 | 100 |
 | Menu | 100 | 100 | 100 | 100 |
-| Journal | 98 | 100 | 100 | 100 |
+| Journal | 97 | 100 | 100 | 100 |
 | Contact | 100 | 100 | 100 | 100 |
 
 Your scores will vary with your host and photos.
